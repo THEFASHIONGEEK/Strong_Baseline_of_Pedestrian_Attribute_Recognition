@@ -77,6 +77,11 @@ def get_pkl_rootpath(dataset):
 
     return data_path
 
+def get_reload_weight(model_path, model):
+    model_path = os.path.join(model_path, "ckpt_max.pth")
+    checkpoint = torch.load(model_path)
+    model.load_state_dict(checkpoint['state_dicts'])
+    return model
 
 def get_pedestrian_metrics(gt_label, preds_probs, threshold=0.5):
     pred_label = preds_probs > threshold
