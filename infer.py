@@ -15,7 +15,7 @@ from dataset.AttrDataset import AttrDataset, get_transform
 from loss.CE_loss import CEL_Sigmoid
 from models.base_block import FeatClassifier, BaseClassifier
 from models.resnet import resnet50, resnet101
-from models.resnest.resnest import resnest50
+
 
 from tools.function import get_model_log_path, get_pedestrian_metrics, get_reload_weight
 from tools.utils import time_str, save_ckpt, ReDirectSTD, set_seed, AverageMeter
